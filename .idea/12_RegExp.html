@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+    RegExp
+    Regular Expression
+    正则 表达式
+
+    Email
+    asdf@asdf.com
+</pre>
+<script>
+    var pattern = new RegExp('e');
+    console.log(pattern.test('hello...'));
+    console.log(pattern.exec('hello...'));
+    pattern.compile('e', 'i');
+    console.log(pattern.exec('hEllo...'));
+    pattern.compile('e', 'gi');
+    do {
+        result = pattern.exec("hello, English...");
+        console.log(result);
+    } while (result !== null);
+</script>
+</body>
+</html>
