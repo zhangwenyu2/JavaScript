@@ -14,16 +14,22 @@
     asdf@asdf.com
 </pre>
 <script>
-    var pattern = new RegExp('e');
+    var pattern = /e/; // new RegExp('e');
     console.log(pattern.test('hello...'));
     console.log(pattern.exec('hello...'));
-    pattern.compile('e', 'i');
+    pattern.compile(/e/i);
     console.log(pattern.exec('hEllo...'));
-    pattern.compile('e', 'gi');
+    pattern.compile(/e/gi);
     do {
         result = pattern.exec("hello, English...");
         console.log(result);
     } while (result !== null);
+    pattern.compile(/[^a-zA-Z0-9]/g);
+    console.log('789Hello, World! 123'.match(pattern));
+    pattern.compile(/(red|blue)/g);
+    console.log('asdbluefread'.match(pattern));
+    pattern.compile(/[A-z]/g); // A-Z 65 a-z 97 ascii
+    console.log('Hello,World![]^'.match(pattern));
 </script>
 </body>
 </html>
