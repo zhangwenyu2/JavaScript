@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var array = ['a', 'b', 'c', 'd'];
+    for(var i=0; i< array.length; i++) {
+        console.log(array[i]);
+    }
+    for(var i in array) { // for...in
+        console.log(array[i]);
+    }
+    /* ES 6 */
+    for(var v of array) { // for...of
+        console.log(v);
+    }
+    for (let v of array) { // iter + Tab
+        console.log(v);
+    }
+</script>
+</body>
+</html>

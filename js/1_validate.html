@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function checkForm() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            if (email.trim().length === 0) {
+                document.getElementById('email').focus(); // 焦点\ ['fəʊkəs] blur 模糊\ [blɜː]
+                return false;
+            }
+            return password.length >= 6;
+        }
+    </script>
+</head>
+<body>
+<form action="http://bing.com" method="post" onsubmit="return checkForm()">
+    <input id="email" name="email" placeholder="EMAIL"><br>
+    <input id="password" type="password" name="password" placeholder="PASSWORD"><br>
+    <input type="submit" value="SIGN IN">
+</form>
+</body>
+</html>
